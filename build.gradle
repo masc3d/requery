@@ -113,7 +113,7 @@ configure([project(':requery'), project(':requery-processor'), project(':requery
             version {
                 name = rootProject.version
                 desc = rootProject.description
-                released  = new Date()
+                released = new Date()
             }
         }
     }
@@ -151,3 +151,6 @@ configure([project(':requery'), project(':requery-processor'), project(':requery
 //    apply plugin: 'com.github.dcendents.android-maven'
 //}
 
+configure([project(':requery-android')]) {
+    apply plugin: 'com.github.dcendents.android-maven'
+}
