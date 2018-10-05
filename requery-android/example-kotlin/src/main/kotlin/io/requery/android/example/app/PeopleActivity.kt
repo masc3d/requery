@@ -3,13 +3,12 @@ package io.requery.android.example.app
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import io.requery.Persistable
@@ -83,7 +82,7 @@ class PeopleActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    internal inner class PersonHolder(itemView: View) : ViewHolder(itemView) {
+    internal inner class PersonHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var image : ImageView? = null
         var name : TextView? = null
     }

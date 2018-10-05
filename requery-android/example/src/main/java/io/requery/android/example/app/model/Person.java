@@ -16,9 +16,10 @@
 
 package io.requery.android.example.app.model;
 
-import android.databinding.Bindable;
-import android.databinding.Observable;
 import android.os.Parcelable;
+
+import androidx.databinding.Bindable;
+import androidx.databinding.Observable;
 import io.requery.CascadeAction;
 import io.requery.Column;
 import io.requery.Entity;

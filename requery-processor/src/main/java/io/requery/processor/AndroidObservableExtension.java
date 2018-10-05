@@ -38,8 +38,8 @@ import java.util.Optional;
  */
 class AndroidObservableExtension implements TypeGenerationExtension, PropertyGenerationExtension {
 
-    private static final String BINDING_PACKAGE = "android.databinding";
-    private static final String MODULE_PACKAGE_OPTION = "android.databinding.modulePackage";
+    private static final String BINDING_PACKAGE = "androidx.databinding";
+    private static final String MODULE_PACKAGE_OPTION = "androidx.databinding.modulePackage";
 
     private final EntityDescriptor entity;
     private final ProcessingEnvironment processingEnvironment;
