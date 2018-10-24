@@ -948,13 +948,7 @@ class EntityWriter<E extends S, S> implements ParameterBinder<E> {
                     writer.insert(entity, proxy, mode, null);
                     break;
                 case UPDATE:
-                    int updated = writer.update(entity, proxy, mode, null, null);
-                    if(updated == 0){
-                        // If this happens, it means that I'm updating the 'many' side of a
-                        // one-to-many (where the foreign key is) to link it to the 'one' side of
-                        // the relationship, but the 'many' side does not exist.
-                        throw new RowCountException(entity.getClass(), 1, updated);
-                    }
+                    writer.update(entity, proxy, mode, null, null);
                     break;
                 case UPSERT:
                     writer.upsert(entity, proxy);
